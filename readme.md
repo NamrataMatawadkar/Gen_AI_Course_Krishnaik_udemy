@@ -8,6 +8,6 @@
 * git push -u origin main    # Push code to GitHub
 * git pull origin main       # Pull the latest change
 * git remote -v     # to check remote repo
-* Use .gitignore to skip unwanted files.
+* Use .gitignore to skip unwanted  
 
 ## the End
