@@ -10,7 +10,8 @@ word_index = imdb.get_word_index()
 reverse_word_index = {value: key for key, value in word_index.items()}
 
 # Load the pre-trained model with ReLU activation
-model = load_model('simple_rnn_imdb.h5')
+#  model = load_model('simple_rnn_imdb.h5')
+model = load_model('/mnt/c/Users/Admin/Desktop/Namrata_study/Gen_AI_Course_Krishnaik_udemy/SimpleRnn/simple_rnn_imdb.h5')
 
 # Step 2: Helper Functions
 # Function to decode reviews
@@ -19,6 +20,7 @@ def decode_review(encoded_review):
 
 # Function to preprocess user input
 def preprocess_text(text):
+    
     words = text.lower().split()
     encoded_review = [word_index.get(word, 2) + 3 for word in words]
     padded_review = sequence.pad_sequences([encoded_review], maxlen=500)
